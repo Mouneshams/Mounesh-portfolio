@@ -58,6 +58,138 @@
     
       text-decoration: underline;
     }
+    /* Skills Section Styling */
+#skills {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  color: #005f73;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0a9396;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Container for skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Each skill card */
+.skill-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 120px;
+}
+
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.skill-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #fefefe, #f2f2f2);
+  border-left: 5px solid #0a9396;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement h3 {
+  color: #005f73;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.achievement p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+#certificates {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#certificates h2 {
+  font-size: 2rem;
+  color: #005f73;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.certificate {
+  background: linear-gradient(to right, #ffffff, #e6f7ff);
+  border-left: 5px solid #0a9396;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.certificate:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -70,6 +202,41 @@
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
     }
+    .project {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #0a9396;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-details h3 {
+  margin: 10px 0;
+  color: #005f73;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
     .project, .achievement {
       background: white;
       padding: 20px;
@@ -115,33 +282,107 @@
     <h2>About Me</h2>
     <p>I’m an MCA student at Aditya University, passionate about full-stack development using Python and MongoDB. I build dynamic web applications and enjoy combining my tech skills with my experience as an international throwball player.</p>
   </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-  
-    <div class="project">
-      <h3>Catering Website</h3>
-      <p>Responsive HTML-based static website designed for catering business demo purposes. Suitable for resumes and freelance showcases.</p>
+  <section>
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <img src="html.jpeg" alt="HTML Logo">
+      <p>HTML</p>
     </div>
-  </section>
+    <div class="skill-card">
+      <img src="css.jpeg" alt="CSS Logo">
+      <p>CSS</p>
+    </div>
+    <div class="skill-card">
+      <img src="js.jpeg" alt="JavaScript Logo">
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-card">
+      <img src="python.jpeg" alt="Python Logo">
+      <p>Python</p>
+    </div>
+    <div class="skill-card">
+      <img src="mongodb.png" alt="MongoDB Logo">
+      <p>MongoDB</p>
+    </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Python, Flask</li>
-      <li>MongoDB</li>
-      <li>Node.js (Learning)</li>
-    </ul>
-  </section>
+  </div>
+</section>
+  
 
-  <section id="achievements">
-    <h2>Achievements</h2>
+  <section id="internships">
+    <h2>Internships</h2>
     <div class="achievement">
+      <h3>👩‍💻 Python Development Intern – OctaNet Services Pvt. Ltd.</h3>
+      <p>
+        Duration: 1 Month (Virtual)<br>
+        Worked on Python-based applications with real-time project exposure and strengthened core programming skills through practical implementation.
+      </p>
+    </div>
+    
+    <div class="achievement">
+      <h3>🌐 Python Full Stack Intern – ExcelR Edtech Pvt. Ltd.</h3>
+      <p>
+        Duration: Virtual<br>
+        Completed full stack development training including HTML, CSS, JavaScript, and Python. Developed real-time web applications and improved both backend and frontend integration skills.
+      </p>
+    </div>
+    
+    
+    </section>
+    <section id="certificates">
+      <h2>Certificates</h2>
+    
+      <div class="certificate">
+        🏅 Programming Fundamentals using Python – Infosys Springboard
+      </div>
+      <div class="certificate">
+        📘 Introduction to NoSQL Databases – Infosys Springboard
+      </div>
+      <div class="certificate">
+        📚 Learning Programmatic Access to MongoDB – Infosys Springboard
+      </div>
+      <div class="certificate">
+        👩‍💼 Young Professional – TCS iON Career Edge
+      </div>
+      <div class="certificate">
+        👨‍💻 Python Development Internship – OctaNet Services Pvt. Ltd.
+      </div>
+      <div class="certificate">
+        🌐 Python Full Stack Internship – ExcelR Edtech Pvt. Ltd.
+      </div>
+    </section>
+    
+
+<!--achivements section-->
+<section id="achievements">
+  <h2>Achievements</h2>
+  
+  <div class="achievement">
+    <img src="mounesh.jpg" alt="Throwball Achievement" class="achievement-img" />
+    
+    <div class="achievement-content">
       <h3>Silver Medal - Indo-Sri Lanka Throwball Test Series 2024</h3>
       <p>Represented India and secured 2nd place at the international throwball championship in Hosur, Tamil Nadu.</p>
     </div>
-  </section>
+  </div>
+</section>
+
+
+  <!-- Optional: Add more projects -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <img src="cartring.jpg" alt="Jeelani Catering Website" class="project-image">
+    <div class="project-details">
+      <h3>Jeelani Catering Website</h3>
+      <p>
+        I designed and developed a clean, professional, and responsive website for a fictional Catering business named "Jeelani Carters" using HTML, CSS, and JavaScript. The website features a modern layout, smooth navigation, and is optimized for all devices. It effectively highlights services, menus, and contact details, suitable for promoting real-world catering businesses with a strong online presence.
+      </p>
+    </div>
+  </div>
+  
+
 
   <section id="contact">
     <h2>Contact</h2>
@@ -181,3 +422,4 @@
   </script>
 </body>
 </html>
+
