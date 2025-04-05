@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balakkagari Mounesh | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+    }
+    header {
+      background-color: #005f73;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      
+    }
+    header h1 {
+      font-size: 3rem;
+      animation: fadeInDown 1s ease-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1s ease-out;
+    }
+    nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #0a9396;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  text-shadow: 1px 1px 2px #f3f708;
+  z-index: 999;
+}
+
+
+    nav a {
+       
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+    
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #005f73;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .project, .achievement {
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-left: 5px solid #0a9396;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .project:hover, .achievement:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      text-align: center;
+      background: #005f73;
+      color: white;
+      padding: 20px 0;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Balakkagari Mounesh</h1>
+    <p>MCA Student | Web Developer | Throwball Player</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m an MCA student at Aditya University, passionate about full-stack development using Python and MongoDB. I build dynamic web applications and enjoy combining my tech skills with my experience as an international throwball player.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+  
+    <div class="project">
+      <h3>Catering Website</h3>
+      <p>Responsive HTML-based static website designed for catering business demo purposes. Suitable for resumes and freelance showcases.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Python, Flask</li>
+      <li>MongoDB</li>
+      <li>Node.js (Learning)</li>
+    </ul>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="achievement">
+      <h3>Silver Medal - Indo-Sri Lanka Throwball Test Series 2024</h3>
+      <p>Represented India and secured 2nd place at the international throwball championship in Hosur, Tamil Nadu.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email:amsmounesh596@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/Mouneshams" target="_blank">your-github</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/mounesh-ams-56a761295/" target="_blank">your-linkedin</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Balakkagari Mounesh. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Animate section appearance
+    const sections = document.querySelectorAll('section');
+    const options = {
+      threshold: 0.3
+    };
+
+    const revealSection = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(revealSection, options);
+
+    sections.forEach(section => {
+      section.style.opacity = 0;
+      section.style.transform = 'translateY(50px)';
+      section.style.transition = 'all 1s ease-out';
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
