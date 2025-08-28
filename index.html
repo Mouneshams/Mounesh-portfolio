@@ -4,271 +4,350 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Balakkagari Mounesh | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #e0eafc, #cfdef3);
-      color: #333;
-    }
-    header {
-      background-color: #005f73;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      
-    }
-    header h1 {
-      font-size: 3rem;
-      animation: fadeInDown 1s ease-out;
-    }
-    header p {
-      font-size: 1.2rem;
-      animation: fadeInUp 1s ease-out;
-    }
-    nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: #0a9396;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  text-shadow: 1px 1px 2px #f3f708;
-  z-index: 999;
-}
 
-
-    nav a {
-       
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
+/* CUSTOM HEADER SECTION - Profile header with image and text */
+    .custom-header {
+      background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+      border: 3px solid #005f73; /* Dark blue border around header */
+      border-radius: 15px; /* Rounded corners */
+      padding: 30px; /* Space inside the header */
+      display: flex; /* Side-by-side layout for image and text */
+      align-items: center; /* Vertically center content */
+      gap: 25px; /* Space between image and text */
+      max-width: 1000px; /* Maximum width of header */
+      width: 400%; /* Responsive width */
+      margin: 20px auto; /* Center header on page with top/bottom spacing */
+      box-shadow: 0 15px 35px rgba(0, 95, 115, 0.2); /* Drop shadow effect */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
     }
-    nav a:hover {
+
+    /* HEADER HOVER EFFECT - Animation when mouse hovers over header */
+    .custom-header:hover {
+      transform: translateY(-5px); /* Lifts header up slightly */
+      box-shadow: 0 20px 40px rgba(0, 95, 115, 0.3); /* Stronger shadow on hover */
+    }
+
+    /* PROFILE IMAGE STYLING - Circular profile picture */
+    .profile-img {
+      width: 120px; /* Fixed width */
+      height: 120px; /* Fixed height (makes it square) */
+      border-radius: 50%; /* Makes square image circular */
+      object-fit: cover; /* Crops image to fit without stretching */
+      border: 4px solid #0a9396; /* Teal border around image */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow around image */
+      transition: transform 0.3s ease; /* Smooth scaling animation */
+    }
+
+    /* IMAGE HOVER EFFECT - Scales image when hovered */
+    .profile-img:hover {
+      transform: scale(1.05); /* Makes image 5% larger */
+    }
+
+    /* TEXT CONTENT CONTAINER - Holds name and title */
+    .text-content {
+      flex: 1; /* Takes remaining space after image */
+    }
+
+    /* MAIN HEADING - Person's name */
+    .text-content h1 {
+      font-size: 2.2em; /* Large text size */
+      color: #005f73; /* Dark blue color */
+      margin-bottom: 10px; /* Space below name */
+      font-weight: 700; /* Bold text */
+    }
+
+    /* SUBTITLE - Job title/description */
+    .text-content p {
+      font-size: 1.1em; /* Medium text size */
+      color: #0a9396; /* Teal color */
+      line-height: 1.4; /* Space between lines */
+      font-weight: 500; /* Medium bold */
+    }
     
-      text-decoration: underline;
+/* BODY STYLING - Overall page appearance */
+    body {
+      font-family: 'Poppins', sans-serif; /* Google font */
+      background: linear-gradient(to right, #e0eafc, #cfdef3); /* Blue gradient background */
+      color: #333; /* Dark gray text color */
     }
-    /* Skills Section Styling */
+    
+/* NAVIGATION BAR - Sticky menu at top */
+    nav {
+  position: sticky; /* Stays at top when scrolling */
+  top: 0; /* Positioned at very top */
+  width: 100%; /* Full width */
+  background: #0a9396; /* Teal background */
+  display: flex; /* Horizontal layout */
+  justify-content: center; /* Center the links */
+  align-items: center; /* Vertically center content */
+  padding: 10px 0; /* Top and bottom padding */
+  text-shadow: 1px 1px 2px #f3f708; /* Yellow text shadow */
+  z-index: 999; /* Appears above other content */
+}
+
+/* NAVIGATION LINKS - Menu items */
+    nav a {
+      color: white; /* White text */
+      margin: 0 15px; /* Space between links */
+      text-decoration: none; /* Removes underline */
+      font-weight: 500; /* Medium bold */
+    }
+    
+    /* NAVIGATION HOVER EFFECT - Underlines links on hover */
+    nav a:hover {
+      text-decoration: underline; /* Adds underline when hovered */
+    }
+    
+/* SKILLS SECTION - Technical skills display area */
 #skills {
-  padding: 40px 20px;
-  background-color: #f8f9fa;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
-  margin-top: 40px;
-  text-align: center;
+  padding: 40px 20px; /* Space inside section */
+  background-color: #f8f9fa; /* Light gray background */
+  border-top: 2px solid #ccc; /* Gray border on top */
+  border-bottom: 2px solid #ccc; /* Gray border on bottom */
+  margin-top: 40px; /* Space above section */
+  text-align: center; /* Center all content */
 }
 
+/* SKILLS HEADING - "Skills" title */
 #skills h2 {
-  font-size: 2rem;
-  color: #005f73;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #0a9396;
-  display: inline-block;
-  padding-bottom: 5px;
+  font-size: 2rem; /* Large text */
+  color: #005f73; /* Dark blue */
+  margin-bottom: 20px; /* Space below title */
+  border-bottom: 3px solid #0a9396; /* Teal underline */
+  display: inline-block; /* Only underlines the text, not full width */
+  padding-bottom: 5px; /* Space between text and underline */
 }
 
-/* Container for skills */
+/* SKILLS CONTAINER - Holds all skill cards */
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+  display: flex; /* Flexible layout */
+  flex-wrap: wrap; /* Wraps to new line if needed */
+  gap: 30px; /* Space between skill cards */
+  justify-content: center; /* Centers all cards */
+  align-items: center; /* Vertically aligns cards */
+  margin-top: 30px; /* Space above skills */
 }
 
-/* Each skill card */
+/* INDIVIDUAL SKILL CARD - Each technology icon */
 .skill-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  width: 120px;
+  background: white; /* White background */
+  padding: 20px; /* Space inside card */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth animation */
+  width: 120px; /* Fixed width for consistency */
 }
 
+/* SKILL IMAGES - Technology logos */
 .skill-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  width: 80px; /* Image width */
+  height: 80px; /* Image height */
+  object-fit: contain; /* Keeps image proportions */
 }
 
+/* SKILL LABELS - Technology names */
 .skill-card p {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
+  margin-top: 10px; /* Space above text */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Dark gray */
 }
 
-/* Hover Effect */
+/* SKILL CARD HOVER EFFECT - Lifts card on hover */
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Moves card up */
 }
 
+/* ACHIEVEMENT CARDS - Experience/accomplishment containers */
 .achievement {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(to right, #fefefe, #f2f2f2);
-  border-left: 5px solid #0a9396;
-  padding: 20px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Side-by-side layout */
+  align-items: center; /* Vertically center content */
+  background: linear-gradient(to right, #fefefe, #f2f2f2); /* White to light gray gradient */
+  border-left: 5px solid #0a9396; /* Teal left border */
+  padding: 20px; /* Space inside card */
+  margin-bottom: 25px; /* Space between cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
 }
 
+/* ACHIEVEMENT HOVER EFFECT - Lifts and enhances shadow */
 .achievement:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Lifts card up */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Stronger shadow */
 }
 
+/* ACHIEVEMENT IMAGES - Pictures in achievement cards */
 .achievement-img {
-  width: 160px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-right: 20px;
-  flex-shrink: 0;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  width: 160px; /* Image width */
+  height: 110px; /* Image height */
+  object-fit: cover; /* Crops image to fit */
+  border-radius: 10px; /* Rounded corners */
+  margin-right: 20px; /* Space between image and text */
+  flex-shrink: 0; /* Prevents image from shrinking */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Image shadow */
 }
 
+/* ACHIEVEMENT TEXT CONTAINER - Holds title and description */
 .achievement-content {
-  flex: 1;
+  flex: 1; /* Takes remaining space after image */
 }
 
+/* ACHIEVEMENT TITLES - Main heading for each achievement */
 .achievement h3 {
-  color: #005f73;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  color: #005f73; /* Dark blue */
+  font-size: 1.3rem; /* Medium-large text */
+  margin-bottom: 10px; /* Space below title */
 }
 
+/* ACHIEVEMENT DESCRIPTIONS - Details about achievement */
 .achievement p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
+  font-size: 1rem; /* Normal text size */
+  color: #333; /* Dark gray */
+  line-height: 1.6; /* Space between lines for readability */
 }
 
+/* CERTIFICATES SECTION - Container for all certificates */
 #certificates {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 40px 20px; /* Space inside section */
+  max-width: 1000px; /* Maximum width */
+  margin: auto; /* Centers section on page */
 }
 
+/* CERTIFICATES HEADING - "Certificates" title */
 #certificates h2 {
-  font-size: 2rem;
-  color: #005f73;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
+  font-size: 2rem; /* Large text */
+  color: #005f73; /* Dark blue */
+  margin-bottom: 20px; /* Space below title */
+  border-bottom: 2px solid #ccc; /* Gray underline */
+  padding-bottom: 5px; /* Space between text and underline */
 }
 
+/* INDIVIDUAL CERTIFICATE - Each certificate entry */
 .certificate {
-  background: linear-gradient(to right, #ffffff, #e6f7ff);
-  border-left: 5px solid #0a9396;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  background: linear-gradient(to right, #ffffff, #e6f7ff); /* White to light blue gradient */
+  border-left: 5px solid #0a9396; /* Teal left border */
+  padding: 15px 20px; /* Space inside certificate */
+  margin-bottom: 15px; /* Space between certificates */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 1rem; /* Normal text size */
+  font-weight: 500; /* Medium bold */
+  color: #333; /* Dark gray text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth animation */
 }
 
+/* CERTIFICATE HOVER EFFECT - Slightly enlarges certificate */
 .certificate:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02); /* Makes certificate 2% larger */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); /* Stronger shadow */
 }
 
-
+/* GENERAL SECTIONS - All main content areas */
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      padding: 40px 20px; /* Space inside sections */
+      max-width: 1000px; /* Maximum width */
+      margin: auto; /* Centers section on page */
     }
+    
+    /* SECTION HEADINGS - All h2 titles */
     section h2 {
-      font-size: 2rem;
-      color: #005f73;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
+      font-size: 2rem; /* Large text */
+      color: #005f73; /* Dark blue */
+      margin-bottom: 20px; /* Space below title */
+      border-bottom: 2px solid #ccc; /* Gray underline */
+      padding-bottom: 5px; /* Space between text and underline */
     }
+    
+/* PROJECT CARDS - Individual project containers */
     .project {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-left: 5px solid #0a9396;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  display: flex; /* Flexible layout */
+  flex-direction: column; /* Stacks content vertically */
+  gap: 15px; /* Space between elements */
+  background: white; /* White background */
+  padding: 20px; /* Space inside card */
+  margin-bottom: 20px; /* Space between projects */
+  border-left: 5px solid #0a9396; /* Teal left border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  transition: transform 0.3s ease; /* Smooth animation */
 }
 
+/* PROJECT HOVER EFFECT - Lifts project card */
 .project:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Moves card up */
 }
 
+/* PROJECT IMAGES - Screenshots of projects */
 .project-image {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 100%; /* Full width of container */
+  max-height: 300px; /* Maximum height */
+  object-fit: cover; /* Crops image to fit */
+  border-radius: 8px; /* Rounded corners */
 }
 
+/* PROJECT TITLES - Project names */
 .project-details h3 {
-  margin: 10px 0;
-  color: #005f73;
+  margin: 10px 0; /* Space above and below */
+  color: #005f73; /* Dark blue */
 }
 
+/* PROJECT DESCRIPTIONS - Details about projects */
 .project-details p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.5;
+  font-size: 1rem; /* Normal text size */
+  color: #333; /* Dark gray */
+  line-height: 1.5; /* Space between lines */
 }
 
+/* DUPLICATE HOVER EFFECTS - Additional hover styling */
     .project, .achievement {
-      background: white;
-      padding: 20px;
-      margin-bottom: 15px;
-      border-left: 5px solid #0a9396;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
+      background: white; /* White background */
+      padding: 20px; /* Space inside */
+      margin-bottom: 15px; /* Space between items */
+      border-left: 5px solid #0a9396; /* Teal left border */
+      border-radius: 8px; /* Rounded corners */
+      transition: transform 0.3s ease; /* Smooth animation */
     }
+    
+    /* GENERAL HOVER EFFECT - Applies to projects and achievements */
     .project:hover, .achievement:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px); /* Lifts elements up */
     }
+    
+/* FOOTER - Bottom section of page */
     footer {
-      text-align: center;
-      background: #005f73;
-      color: white;
-      padding: 20px 0;
+      text-align: center; /* Centers text */
+      background: #005f73; /* Dark blue background */
+      color: white; /* White text */
+      padding: 20px 0; /* Top and bottom padding */
     }
+    
+/* ANIMATION KEYFRAMES - Custom animations */
+    /* FADE IN FROM TOP - Elements appear from above */
     @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-30px); }
-      100% { opacity: 1; transform: translateY(0); }
+      0% { opacity: 0; transform: translateY(-30px); } /* Starts invisible and above */
+      100% { opacity: 1; transform: translateY(0); } /* Ends visible and in position */
     }
+    
+    /* FADE IN FROM BOTTOM - Elements appear from below */
     @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+      0% { opacity: 0; transform: translateY(30px); } /* Starts invisible and below */
+      100% { opacity: 1; transform: translateY(0); } /* Ends visible and in position */
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Balakkagari Mounesh</h1>
-    <p>MCA Student | Web Developer | Throwball Player</p>
-  </header>
+<header class="custom-header">
+    <img src="MouneshResume.jpg" alt="Balakkagari Mounesh" class="profile-img">
+    <div class="text-content">
+        <h1>Balakkagari Mounesh</h1>
+        <p>MCA Student | Full Stack Web Developer | Throwball Player</p>
+    </div>
+</header>
+</head>
 
   <nav>
     <a href="#about">About</a>
@@ -284,7 +363,7 @@
   </section>
   <section>
   <h2>Skills</h2>
-  <div class="skills">
+  <div class="skills-container">
     <div class="skill-card">
       <img src="html.jpeg" alt="HTML Logo">
       <p>HTML</p>
@@ -292,6 +371,10 @@
     <div class="skill-card">
       <img src="css.jpeg" alt="CSS Logo">
       <p>CSS</p>
+    </div>
+     <div class="skill-card">
+      <img src="bootstrap-log.png" alt="bootstrap Logo">
+      <p>Bootstrap</p>
     </div>
     <div class="skill-card">
       <img src="js.jpeg" alt="JavaScript Logo">
@@ -313,44 +396,59 @@
   <section id="internships">
     <h2>Internships</h2>
     <div class="achievement">
-      <h3>👩‍💻 Python Development Intern – OctaNet Services Pvt. Ltd.</h3>
-      <p>
-        Duration: 1 Month (Virtual)<br>
-        Worked on Python-based applications with real-time project exposure and strengthened core programming skills through practical implementation.
-      </p>
-    </div>
-    
-    <div class="achievement">
       <h3>🌐 Python Full Stack Intern – ExcelR Edtech Pvt. Ltd.</h3>
       <p>
         Duration: Virtual<br>
-        Completed full stack development training including HTML, CSS, JavaScript, and Python. Developed real-time web applications and improved both backend and frontend integration skills.
+        Completed full stack development training including HTML, CSS, JavaScript,Bootstrap and Python. Developed real-time web applications and improved both backend and frontend integration skills.
       </p>
     </div>
+
+       <div class="achievement">
+      <h3>👩‍💻 Front-End Development Intern –  Cognifyz Technology Pvt. Ltd.</h3>
+      <p>
+        Duration: 1 Month (Virtual)<br>
+        Worked on HTML,CSS,Bootstrap and Javascript-based applications with real-time project exposure and strengthened core programming skills through practical implementation.
+      </p>
+    </div>
+    
     
     
     </section>
     <section id="certificates">
-      <h2>Certifications</h2>
+      <h2>Certificates</h2>
     
       <div class="certificate">
-        🏅 Programming Fundamentals using Python – Infosys Springboard
+        🌐 Python Full Stack Internship – ExcelR Edtech Pvt. Ltd. 
+        <a href="Excelr.png">Click Here</a>
       </div>
       <div class="certificate">
-        📘 Introduction to NoSQL Databases – Infosys Springboard
+        👨‍💻 Fornt-End Development Internship – Cognifyz Technology Pvt. Ltd. 
+        <a href="cognifyz.png">Click Here</a>
       </div>
       <div class="certificate">
-        📚 Learning Programmatic Access to MongoDB – Infosys Springboard
+        👨‍💻 NPTEL Certification – Deep Learning, completed through SWAYAM/NPTEL (2025) 
+        <a href="NPTL.png">Click Here</a>
       </div>
       <div class="certificate">
-        👩‍💼 Young Professional – TCS iON Career Edge
+        🏅 Programming Fundamentals using Python – Infosys Springboar.
+         <a href="OOPSinPython.png">Click Here</a>
       </div>
       <div class="certificate">
-        👨‍💻 Python Development Internship – OctaNet Services Pvt. Ltd.
+        📘 Introduction to NoSQL Databases – Infosys Springboard.
+        <a href="NoSQL.png">Click Here
+
+        </a>
       </div>
       <div class="certificate">
-        🌐 Python Full Stack Internship – ExcelR Edtech Pvt. Ltd.
+        📚 Learning Programmatic Access to MongoDB – Infosys Springboard.
+        <a href="NoSQLandMongoDB.png">Click Here</a>
       </div>
+      <div class="certificate">
+        👩‍💼 Young Professional – TCS iON Career Edge.
+        <a href="TCSION.png">Click Here</a>
+      </div>
+      
+      
     </section>
     
 
@@ -359,13 +457,27 @@
   <h2>Achievements</h2>
   
   <div class="achievement">
-    <img src="mounesh.jpg" alt="Throwball Achievement" class="achievement-img" />
+    <a href="mounesh.jpg"><img src="mounesh.jpg" alt="Throwball Achievement" class="achievement-img" /></a>
     
     <div class="achievement-content">
       <h3>Silver Medal - Indo-Sri Lanka Throwball Test Series 2024</h3>
-      <p>Represented India and secured 2nd place at the international throwball championship in Hosur, Tamil Nadu.</p>
+      <p>Represented India and secured 2nd place at the international throwball championship in Hosur, Tamil Nadu.
+      </p>
     </div>
   </div>
+</section>
+
+<section>
+  <div class="achievement">
+
+ 
+  <div class="achievement-content">
+    <a href="NCC.jpg">
+    <img src="NCC.jpg" alt="NCC C Certificate Holder" class="achievement-img"></a>
+      <h3>NCC ‘C’ Certificate Holder (2021–2024)</h3>
+      <P>Awarded NCC 'C' Certificate, demonstrating advanced leadership, discipline, and commitment through rigorous national-level training and assessment. Participated in camps and activities promoting teamwork, patriotism, and civic responsibility.</P>
+    </div>
+     </div>
 </section>
 
 
@@ -373,9 +485,9 @@
 <section id="projects">
   <h2>Projects</h2>
   <div class="project">
-    <img src="cartring.jpg" alt="Jeelani Catering Website" class="project-image">
+    <a href="https://mouneshams.github.io/jeelaniCaterers-Events-services/"><img src="cartring.jpg" alt="Jeelani Catering Website" class="project-image"></a>
     <div class="project-details">
-      <h3>Jeelani Catering Website</h3>
+      <h3>Jeelani Carteres and Event Services</h3>
       <p>
         I designed and developed a clean, professional, and responsive website for a fictional Catering business named "Jeelani Carters" using HTML, CSS, and JavaScript. The website features a modern layout, smooth navigation, and is optimized for all devices. It effectively highlights services, menus, and contact details, suitable for promoting real-world catering businesses with a strong online presence.
       </p>
@@ -422,4 +534,3 @@
   </script>
 </body>
 </html>
-
